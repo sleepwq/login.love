@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="login.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <header>
+        <h1>Login de Usuário</h1>
+    </header>
+</head>
+<body>
+  <form action="heart-particles-v2.html" method="POST">
+    <div class="login">
+        <div class="Usuário">
+            <input type="text" id="username" placeholder="Nome de Usuário">
+            <span id="erroUsername" class="error-message"></span><br><br>
+        </div>
+        <div class="Senha">
+            <input type="password" id="password" placeholder="Senha">
+            <span id="erroSenha" class="error-message"></span><br><br>
+        </div>
+        <div class="Login-Button">
+            <button type="submit" id="login">Login</button>
+        </div>
+    </div>
+  </form>
+    <script>
+
+  const senhaInput = document.getElementById('password');
+  const erroSenha = document.getElementById('erroSenha');
+
+  senhaInput.addEventListener('input', function () {
+    if (senhaInput.value.length < 8) {
+      // Define mensagem personalizada
+      erroSenha.textContent = 'A senha deve ter no mínimo 8 caracteres.';
+    } else {
+      // Remove mensagem de erro
+      erroSenha.textContent = '';
+
+    }
+  });
+
+  // Bloqueia espaço durante a digitação
+  senhaInput.addEventListener('keydown', function(e) {
+    if (e.key === ' ') {
+      e.preventDefault();
+    }
+  });
+   
+const loginButton = document.getElementById('login');
+loginButton.addEventListener('click', function(event) {
+  const usernameInput = document.getElementById('username');
+  const passwordInput = document.getElementById('password');
+  const erroUsername = document.getElementById('erroUsername');
+  const erroSenha = document.getElementById('erroSenha');
+
+  let valid = true;
+
+  // Validação do nome de usuário
+  if (usernameInput.value.trim() === '') {
+    erroUsername.textContent = 'O nome de usuário é obrigatório.';
+    valid = false;
+  } else {
+    erroUsername.textContent = '';
+  }
+
+  // Validação da senha
+  if (passwordInput.value.trim() === '') {
+    erroSenha.textContent = 'A senha é obrigatória.';
+    valid = false;
+  } else if (passwordInput.value.length < 8) {
+    erroSenha.textContent = 'A senha deve ter no mínimo 8 caracteres.';
+    valid = false;
+  } else {
+    erroSenha.textContent = '';
+  }
+
+  // Se alguma validação falhar, impede o envio do formulário
+  if (!valid) {
+    event.preventDefault();
+  }
+});
+   
+</script>
+<footer>
+ <a href="#" class="footer-link"> Já possuo uma conta </a>
+</footer>
+</body>
+</html>
