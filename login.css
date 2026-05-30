@@ -53,19 +53,20 @@ body {
     border-bottom: 2px solid rgb(255, 255, 255);
 }
 .error-message {
+    display: flex;
+    flex-grow: 1;
     cursor: default;
     position: absolute;
     color: red;
     font-size: 15px;
     margin-top: 5px;
 }
-footer a {
+footer h1 {
     font-size: 17px;
-    position:fixed;
+    position: absolute;
     text-decoration: none;
-    bottom: 280px;
+    bottom: 200px;
     left: 42%;
-    width: all;
     transform: translateX(-50%);
     font-family: Sacramento;
     color: white;
@@ -75,7 +76,7 @@ header h1 {
     font-size: 25px;
     cursor: default;
     position: absolute;
-    top: 240px;
+    top: 200px;
     left: 50%;
     transform: translateX(-50%);
     font-family: Verdana;
