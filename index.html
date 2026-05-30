@@ -61,8 +61,14 @@ loginButton.addEventListener('click', function(event) {
   if (usernameInput.value.trim() === '') {
     erroUsername.textContent = 'O nome de usuário é obrigatório.';
     valid = false;
+  } else if (usernameInput.value === "Thais" || usernameInput.value === "thais" || usernameInput.value === "THAIS") {
+     valid = true;
+  } 
+    else if (usernameInput.value === "Caio" || usernameInput.value === "caio" || usernameInput.value === "CAIO") {
+     valid = true;
   } else {
-    erroUsername.textContent = '';
+    erroUsername.textContent = 'Usuário incorreto.';
+    valid = false;
   }
 
   // Validação da senha
@@ -72,8 +78,12 @@ loginButton.addEventListener('click', function(event) {
   } else if (passwordInput.value.length < 8) {
     erroSenha.textContent = 'A senha deve ter no mínimo 8 caracteres.';
     valid = false;
-  } else {
-    erroSenha.textContent = '';
+  } else if (passwordInput.value === "17072026") {
+     valid = true;
+  }
+    else {
+    erroSenha.textContent = 'Essa senha é incorreta.';
+    valid = false;
   }
 
   // Se alguma validação falhar, impede o envio do formulário
