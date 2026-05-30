@@ -63,11 +63,11 @@ body {
 }
 footer h1 {
     font-size: 17px;
-    position: absolute;
+    position: relative;
     text-decoration: none;
-    bottom: 200px;
-    left: 42%;
-    transform: translateX(-50%);
+    bottom: -200px;
+    left: -150px;
+    transform: translateX(-100%);
     font-family: Sacramento;
     color: white;
     cursor: pointer;
@@ -75,10 +75,10 @@ footer h1 {
 header h1 {
     font-size: 25px;
     cursor: default;
-    position: absolute;
-    top: 200px;
-    left: 50%;
-    transform: translateX(-50%);
+    position: relative;
+    top: -200px;
+    left: 500px;
+    transform: translateX(-100%);
     font-family: Verdana;
     color: white;
 }
