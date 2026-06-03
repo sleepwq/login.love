@@ -70,6 +70,10 @@ loginButton.addEventListener('click', function(event) {
     erroUsername.textContent = 'Usuário incorreto.';
     valid = false;
   }
+  
+    if (!valid) {
+    event.preventDefault();
+  }
 
   // Validação da senha
   if (passwordInput.value.trim() === '') {
