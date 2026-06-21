@@ -42,7 +42,9 @@
         margin: 0;
         padding: 0;
         overflow: hidden;
-        background-color: rgba(255, 192, 203, 0.1);
+        background: linear-gradient(270deg, #fa2020, #ff6b6b, #fd3838);
+        animation: gradiente 15s ease infinite;
+        background-size: 400% 400%;
         font-family: "Archivo Black", sans-serif;
         color: white;
       }
@@ -116,7 +118,7 @@
   </text>
 </svg>
 
-<button onclick="window.location.href='login.html'" class="sim">Sim</button>
+<button onclick="window.location.href='index.html'" class="sim">Sim</button>
 <button id="não" class="não">Não</button>
 
     <canvas id="c"></canvas>
@@ -310,6 +312,7 @@
 
     botao.addEventListener("click", () => {
       botao.style.display = "none"; // faz o botão desaparecer
+      botao.style.animation = "fadeOut 1s forwards"; // animação de fade out
     });
     </script>
   </body>
