@@ -17,7 +17,7 @@ body {
     align-items: center;
     justify-content: center;
     background-color: #ffffff5d;
-    background: url(aliança.jpeg) no-repeat center center;
+    background: url(aliança.jpeg) no-repeat center;
     width: 300px;
     height: 300px;
     border-radius: 10px;
@@ -25,7 +25,7 @@ body {
 footer {
     z-index: 3;
     position: absolute;
-    bottom: 0;
+    bottom: -10px;
     width: 100%;
     text-align: center;
     background-color: rgba(0, 0, 0, 0);
